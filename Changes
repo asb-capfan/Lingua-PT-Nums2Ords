@@ -1,5 +1,9 @@
 Revision history for Perl extension Lingua::PT::Nums2Ords.
 
+0.05  Thu Sep  30 23:14:00 2004
+	- Perl required version is now 5.006 (was 5.008)
+	- added META.yml
+
 0.04  Wed May  10 14:01:00 2004
 	- updated documentation
 

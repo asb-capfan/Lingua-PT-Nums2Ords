@@ -1,6 +1,6 @@
 package Lingua::PT::Nums2Ords;
 
-use 5.008;
+use 5.006;
 use strict;
 use warnings;
 
@@ -20,7 +20,7 @@ our @EXPORT = qw(
 	num2ord
 );
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 NAME
 
