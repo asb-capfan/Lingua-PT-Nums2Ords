@@ -17,10 +17,9 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our @EXPORT = qw(
-	num2ord
 );
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 NAME
 
@@ -28,11 +27,26 @@ Lingua::PT::Nums2Ords - Converts numbers to Portuguese ordinals
 
 =head1 SYNOPSIS
 
-  use Lingua::PT::Nums2Ords;
+  use Lingua::PT::Nums2Ords qw/num2ord/;
 
   $ord = num2ord(20)     # "vigesimo"
 
   @ord = num2ord(1,2,3)  # qw(primeiro segundo terceiro)
+
+=head1 DESCRIPTION
+
+Converts numbers to Portuguese ordinals. Works up to 999.999.999.999
+('novecentos e noventa e nove bilionesimos novecentos e noventa e
+nove milionesimos novecentos e noventa e nove milesimos nongentesimo
+nonagesimo nono').
+
+=head2 num2ord
+
+This is the only function in the module. It turns a number into an
+ordinal.
+
+  $ord = num2ord(2)
+  # $ord now holds "segundo"
 
 =cut
 
@@ -103,36 +117,24 @@ sub num2ord {
 1;
 __END__
 
-=head1 DESCRIPTION
-
-Converts numbers to Portuguese ordinals. Works up to 999.999.999.999
-('novecentos e noventa e nove bilionesimos novecentos e noventa e
-nove milionesimos novecentos e noventa e nove milesimos nongentesimo
-nonagesimo nono').
-
 =head1 DEPENDENCIES
 
 Lingua::PT::Nums2Words
 
 =head1 SEE ALSO
 
-Lingua::PT::Ords2Nums
-
-=head1 MESSAGE FROM THE AUTHOR
-
-If you're using this module, please drop me a line to my e-mail. Tell
-me what you're doing with it. Also, feel free to suggest new
-bugs^H^H^H^H^H features.
+More tools for the Portuguese language processing can be found at the
+Natura project: http://natura.di.uminho.pt
 
 =head1 AUTHOR
 
-Jose Alves de Castro, E<lt>cog [at] cpan [dot] org<gt>
+Jose Castro, C<< <cog@cpan.org> >>
 
-=head1 COPYRIGHT AND LICENSE
+=head1 COPYRIGHT & LICENSE
 
-Copyright 2004 by Jose Alves de Castro
+Copyright 2004 Jose Castro, All Rights Reserved.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself. 
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut

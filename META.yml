@@ -1,7 +1,7 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Lingua-PT-Nums2Ords
-version:      0.05
+version:      0.06
 version_from: Nums2Ords.pm
 installdirs:  site
 requires:

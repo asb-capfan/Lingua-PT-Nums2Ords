@@ -6,7 +6,7 @@
 # change 'tests => 1' to 'tests => last_test_to_print';
 
 use Test::More tests => 6;
-BEGIN { use_ok('Lingua::PT::Nums2Ords') };
+BEGIN { use_ok('Lingua::PT::Nums2Ords', 'num2ord') };
 
 #########################
 
