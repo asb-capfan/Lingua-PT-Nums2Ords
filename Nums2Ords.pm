@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-use Lingua::PT::Nums2Words;
+use Lingua::PT::Nums2Words qw/num2word/;
 
 require Exporter;
 
@@ -19,7 +19,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 =head1 NAME
 
