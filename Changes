@@ -1,5 +1,8 @@
 Revision history for Perl extension Lingua::PT::Nums2Ords.
 
+0.04  Wed May  10 14:01:00 2004
+	- updated documentation
+
 0.03  Wed May  10 16:13:00 2004
 	- fixed Makefile.PL (PREREQ_PM now includes Lingua::PT::Nums2Words)
 

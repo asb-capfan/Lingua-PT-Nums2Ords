@@ -20,7 +20,7 @@ our @EXPORT = qw(
 	num2ord
 );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -30,7 +30,7 @@ Lingua::PT::Nums2Ords - Converts numbers to Portuguese ordinals
 
   use Lingua::PT::Nums2Ords;
 
-  $ord = num2ord(20)     # "vigésimo"
+  $ord = num2ord(20)     # "vigesimo"
 
   @ord = num2ord(1,2,3)  # qw(primeiro segundo terceiro)
 
@@ -106,9 +106,9 @@ __END__
 =head1 DESCRIPTION
 
 Converts numbers to Portuguese ordinals. Works up to 999.999.999.999
-('novecentos e noventa e nove bilionésimos novecentos e noventa e nove
-milionésimos novecentos e noventa e nove milésimos nongentésimo nonagésimo
-nono').
+('novecentos e noventa e nove bilionesimos novecentos e noventa e
+nove milionesimos novecentos e noventa e nove milesimos nongentesimo
+nonagesimo nono').
 
 =head1 DEPENDENCIES
 
@@ -118,9 +118,15 @@ Lingua::PT::Nums2Words
 
 Lingua::PT::Ords2Nums
 
+=head1 MESSAGE FROM THE AUTHOR
+
+If you're using this module, please drop me a line to my e-mail. Tell
+me what you're doing with it. Also, feel free to suggest new
+bugs^H^H^H^H^H features.
+
 =head1 AUTHOR
 
-Jose Alves de Castro, E<lt>jac@natura.di.uminho.pt<gt>
+Jose Alves de Castro, E<lt>cog [at] cpan [dot] org<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

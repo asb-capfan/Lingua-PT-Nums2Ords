@@ -1,16 +1,15 @@
 Lingua/PT/Nums2Ords version 0.03
 ================================
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+Converts numbers to Portuguese ordinals.
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+  use Lingua::PT::Nums2Ords;
+
+  $ord = num2ord(20)     # "vigésimo"
+
+  @ord = num2ord(1,2,3)  # qw(primeiro segundo terceiro)
+
+(works up to 999.999.999.999)
 
 INSTALLATION
 
@@ -24,6 +23,10 @@ To install this module type the following:
 DEPENDENCIES
 
 Lingua::PT::Nums2Words
+
+SEE ALSO
+
+The POD documentation in Nums2Ords.pm
 
 COPYRIGHT AND LICENCE
 
