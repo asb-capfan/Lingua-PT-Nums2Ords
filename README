@@ -1,4 +1,4 @@
-Lingua/PT/Nums2Ords version 0.01
+Lingua/PT/Nums2Ords version 0.02
 ================================
 
 The README is used to introduce the module and provide instructions on
@@ -23,7 +23,7 @@ To install this module type the following:
 
 DEPENDENCIES
 
-No dependencies.
+Lingua::PT::Nums2Words
 
 COPYRIGHT AND LICENCE
 

@@ -4,6 +4,8 @@ use 5.008;
 use strict;
 use warnings;
 
+use Lingua::PT::Nums2Words;
+
 require Exporter;
 
 our @ISA = qw(Exporter);
@@ -18,7 +20,7 @@ our @EXPORT = qw(
 	num2ord
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -39,8 +41,31 @@ sub num2ord {
   my @numbers = wantarray ? @_ : shift;
   my @results = map {
     $_ < 0 && return $_;
-    $_ > 199 && return $_;
+    $_ > 999999999999 && return $_;
 
+    s/(?<!\d)1(?=\d{9}$)/bilionésimo /;
+    s/(\d{1,3})(?=\d{9})/num2word($1).' bilionésimos '/e;
+
+    s/(?<!\d)0+//;
+
+    s/(?<!\d)1(?=\d{6}$)/milionésimo /;
+    s/(\d{1,3})(?=\d{6})/num2word($1).' milionésimos '/e;
+
+    s/(?<!\d)0+//;
+
+    s/(?<!\d)1(?=\d{3}$)/milésimo /;
+    s/(\d{1,3})(?=\d{3})/num2word($1).' milésimos '/e;
+
+    s/(?<!\d)0//;
+
+    s/9(?=\d\d)/nongentésimo /;
+    s/8(?=\d\d)/octigentésimo /;
+    s/7(?=\d\d)/septigentésimo /;
+    s/6(?=\d\d)/seiscentésimo /;
+    s/5(?=\d\d)/quingentésimo /;
+    s/4(?=\d\d)/quadrigentésimo /;
+    s/3(?=\d\d)/tricentésimo /;
+    s/2(?=\d\d)/ducentésimo /;
     s/1(?=\d\d)/centésimo /;
 
     s/(?<!\d)0//;
@@ -80,8 +105,14 @@ __END__
 
 =head1 DESCRIPTION
 
-Converts numbers to Portuguese ordinals. Still needs further testing and
-capability.
+Converts numbers to Portuguese ordinals. Works up to 999.999.999.999
+('novecentos e noventa e nove bilionésimos novecentos e noventa e nove
+milionésimos novecentos e noventa e nove milésimos nongentésimo nonagésimo
+nono').
+
+=head1 DEPENDENCIES
+
+Lingua::PT::Nums2Words
 
 =head1 SEE ALSO
 
@@ -89,7 +120,7 @@ Lingua::PT::Ords2Nums
 
 =head1 AUTHOR
 
-Jose Alves de Castro, E<lt>jac@localdomainE<gt>
+Jose Alves de Castro, E<lt>jac@natura.di.uminho.pt<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
