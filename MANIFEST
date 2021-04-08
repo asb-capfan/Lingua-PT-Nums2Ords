@@ -2,7 +2,7 @@ Changes
 Makefile.PL
 MANIFEST
 lib/Lingua/PT/Nums2Ords.pm
-README
+README.md
 t/01-basic_tests.t
 t/02-misc.t
 META.yml                                 Module meta-data (added by MakeMaker)
